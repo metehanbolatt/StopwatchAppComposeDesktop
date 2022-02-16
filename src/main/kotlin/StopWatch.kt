@@ -24,7 +24,7 @@ class StopWatch {
         coroutineScope.launch {
             lastTimestamp = System.currentTimeMillis()
             this@StopWatch.isActive = true
-            while (isActive) {
+            while (this@StopWatch.isActive) {
                 delay(10L)
                 timeMillis += System.currentTimeMillis() - lastTimestamp
                 lastTimestamp = System.currentTimeMillis()
